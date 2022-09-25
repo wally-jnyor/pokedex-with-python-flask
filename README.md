@@ -2,6 +2,7 @@
 
 # html
 # css
+# javascript
 # python
 # flask-framework
 # deployed on heroku
