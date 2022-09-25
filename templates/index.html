@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- BLOCO CONTAINER GLOBAL -->
+    <section class="pokedex_main-container">
+
+        <!-- START BLOCO 1 -->
+        <div class="tampa-pokedex">
+            <div class="Top-display">
+                <nav class="navbar">
+                    <img id="mobileSignal" src="/static/assets/signalBar3.png" alt="">
+                    <img src="/static/assets/batteryIcon2.png" alt="">
+                </nav>
+                <div class="infos-pokemon">
+                    <label class="pokemonName">Nome: {{nome}}</label>
+                    <image class="pokemonPhoto" src="{{foto}}">
+                    <label class="tipoPokemon">Tipo: {{tipo1}}, {{tipo2}}</label>
+                    <!--<label class="tipoPokemon2">{{tipo2}}</label>-->
+                    <label class="InfoHabilidades">Habilidades: {{num_habilidade}}</label>
+                    <button class="mostrar-habilidades">List</button>
+                </div>
+                <div class="habilidades-list">
+                    <div class="list-container">
+                        <p>{{habilidades}}</p>
+                    </div>
+                    <button class="BackToMain"> Voltar</button>
+                </div>
+            </div>
+        </div>
+        <!-- END BLOCO 1 -->
+
+        <!--  START BLOCO 2 -->
+        <div class="dobra-tampa">
+            <div class="dobras"></div>
+            <div class="dobras"></div>
+            <div class="dobras"></div>
+        </div>
+        <!--  END BLOCO 2 -->
+
+        <!--  START BLOCO  3 E 3/1 -->
+        <div class="corpo-pokedex">
+            <div class="left-corpo">
+                <div class="left-leds" id="led-left1"></div>
+                <div class="left-leds" id="led-left2"></div>
+                <div class="lente-left"></div>
+            </div>
+            <!--  END BLOCO 3/1 -->
+
+            <!--  START BLOCO 3/2 -->
+            <div class="central-corpo">
+                <div class="borda-display">
+                    <div class="display-pokedex">
+                        <form class="pokeform" action="buscar" method="POST">
+                            <input placeholder="Buscar Pokemon" name="nome" type="text">
+                            <button type="submit" name="buscar" id="nome">Buscar</button>
+                        </form>
+                    </div>
+                    <div class="buttons-display">
+                        <button class="display_btn1">start</button>
+                        <button class="display_btn2">menu</button>
+                    </div>
+                </div>
+            </div>
+            <!--  END BLOCO 3/2 -->
+
+            <!--  START BLOCO 3/3 -->
+            <div class="right-corpo">
+                <div class="right-corpo-box">
+                    <div class="border-buttons">
+                        <div class="box-grid-buttons">
+                            <div class="central-pad"></div>
+                            <button class="buttons-right" id="btn1"><div id="triangulo-para-cima"></div></button>
+                            <button class="buttons-right" id="btn2"><div id="triangulo-para-esquerda"></div></button>
+                            <button class="buttons-right" id="btn3"><div id="triangulo-para-direita"></div></button>
+                            <button class="buttons-right" id="btn4"><div id="triangulo-para-baixo"></div></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  END BLOCO 3/3 -->
+        </div>
+        <!--  END BLOCO 3 -->
+
+    </section>
+    <!--  END BLOCO CONTAINER GLOBAL -->
+
+</body>
+<script src="{{url_for('static', filename='script.js')}}"></script>
+</html>
