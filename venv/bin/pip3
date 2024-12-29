@@ -1,4 +1,4 @@
-#!/home/walecy/Documents/pokedex-with-python-flask/venv/bin/python3
+#!/home/wally/Documentos/projetos/frameworks/flask-pyhton/pokedex-with-python-flask/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
